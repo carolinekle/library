@@ -1,0 +1,57 @@
+body{    
+    display: flex;
+    font-family: Helvetica, sans-serif;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    overflow: scroll;
+    margin:0px;
+    background-color: #ccd2d8;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    height:150px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav > img{
+    width: 100px;
+    object-fit:contain
+}
+
+
+
+.modal{
+    height: 320px;
+    width:350px;
+    background-color: beige;
+    margin-top:3rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+.modal input, .submit{
+    max-width:150px;
+    margin: auto;
+}
+
+
+.modal div{
+    margin: auto;
+}
+
+.exitModal{
+    display: flex;
+    align-self: flex-end;
+    margin:1rem;
+    border-radius: 50%;
+}
