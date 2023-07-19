@@ -32,11 +32,14 @@ nav > img{
     text-align: center;
 }
 
-.modal{
+#modal{
     height: 320px;
     width:350px;
     background-color: beige;
-    margin-top:2rem;
+    position: absolute; /* or position: fixed; */
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -44,15 +47,22 @@ nav > img{
     border-radius: 1rem;
     z-index: 3; /*fix positioning*/
     display: none;
+
 }
 
-.modal input, .submit{
+input{
     max-width:150px;
     margin: auto;
 }
 
 
-.modal div{
+.checkmark{
+    max-width:150px;
+    margin: auto;
+}
+
+.submit{
+    max-width:150px;
     margin: auto;
 }
 
@@ -63,6 +73,8 @@ nav > img{
     border-radius: 50%;
 
 }
+
+
 
 .library{
     height: 100vh;

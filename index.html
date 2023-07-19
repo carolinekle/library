@@ -13,7 +13,7 @@
         <h2 class = "heading">your library</h2>
         <button class = "add">add book</button>
     </nav>
-    <div class ="modal">
+    <div id ="modal">
         <button class="exitModal">X</button>
         <input type="text"
         name ="title"
@@ -21,12 +21,17 @@
         <input type="text"
         name ="author"
         placeholder="author">
-        <input data-pages="value"
+        <input 
+        name="pages"
+        data-pages="value"
         placeholder="pages">
-        <div>
-            <input type="checkbox"
-            data-read="read-or-not">
-            <label for="read">Have you read it?</label>
+        <div class="checkmark">
+            <label for="read">Have you read it?
+                <input type="checkbox"
+                name="checkbox"
+                data-read="read-or-not"
+                value="yes">
+            </label>
         </div>
         <button class="submit">submit</button>
     </div>
