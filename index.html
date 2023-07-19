@@ -10,24 +10,34 @@
 <body>
     <nav>
         <img src = "images/book.gif">
+        <h2 class = "heading">your library</h2>
         <button class = "add">add book</button>
     </nav>
     <div class ="modal">
         <button class="exitModal">X</button>
         <input type="text"
+        name ="title"
         placeholder="title">
         <input type="text"
+        name ="author"
         placeholder="author">
-        <input type="text"
+        <input data-pages="value"
         placeholder="pages">
         <div>
-            <input type="checkbox">
+            <input type="checkbox"
+            data-read="read-or-not">
             <label for="read">Have you read it?</label>
         </div>
         <button class="submit">submit</button>
     </div>
-    <content>
-
+    <content class = "library">
+        <div class = "book-card">
+            <p class="title">East of Eden </p>
+            <p class="author">John Steinbeck</p>
+            <p class="pages">600 pages</p><!-- insert auto "pages"after page count  -->
+            <p class="read">Read</p>
+            <button class= "remove-book">remove book</button>
+        </div>
     </content>
 </body>
 </html>

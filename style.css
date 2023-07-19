@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 body{    
     display: flex;
     font-family: Helvetica, sans-serif;
@@ -8,6 +10,7 @@ body{
     background-color: #ccd2d8;
     display: flex;
     flex-direction: column;
+    font-family: 'VT323', monospace;
 }
 
 nav{
@@ -17,6 +20,7 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-top: 2rem;
 }
 
 nav > img{
@@ -24,19 +28,22 @@ nav > img{
     object-fit:contain
 }
 
-
+.heading{
+    text-align: center;
+}
 
 .modal{
     height: 320px;
     width:350px;
     background-color: beige;
-    margin-top:3rem;
+    margin-top:2rem;
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: space-evenly;
     border-radius: 1rem;
-    z-index: 2;
+    z-index: 3; /*fix positioning*/
+    display: none;
 }
 
 .modal input, .submit{
@@ -54,4 +61,26 @@ nav > img{
     align-self: flex-end;
     margin:1rem;
     border-radius: 50%;
+
+}
+
+.library{
+    height: 100vh;
+    width: 100vw;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book-card{
+    display: flex;
+    height: 220px;
+    width:250px;
+    background-color: beige;
+    margin:2rem;
+    padding:1rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
 }
