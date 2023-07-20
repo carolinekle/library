@@ -9,7 +9,7 @@ const library = document.querySelector(".library");
 let myLibrary = [];
 console.log(myLibrary)
 
-let newBook;
+
 
 class Book{
     constructor(bookAuthor, bookTitle, bookPages, readOrNot){
@@ -33,11 +33,11 @@ class Book{
         author.innerText = this.author;
         pages.innerText = this.pages + " pages";
         
-        if(this.read.checked === true){
+        if(this.read){
             read.innerText = "Read"
         }
-        if(this.read.checked === false){
-            read.innerText === "Not read"
+        else{
+            read.innerHTML = "Not Read"
         }
 
         remove.innerText = "remove book"
@@ -55,7 +55,7 @@ class Book{
     }
 
     addLibrary(){
-        myLibrary.push(this)
+        
     }
     
     removeBook(){
@@ -63,9 +63,6 @@ class Book{
     }
 
 }
-
-
-
 
 
 addBook.addEventListener("click", () => {
@@ -79,7 +76,7 @@ submitBook.addEventListener("click", () =>{
     const bookAuthor = document.querySelector('[name="author"]').value;
     const bookPages = document.querySelector('[name="pages"]').value;
     const readOrNot = document.querySelector('[name="checkbox"]');
-    const newBook = new Book(bookAuthor, bookTitle, bookPages, readOrNot);
+    newBook = new Book(bookAuthor, bookTitle, bookPages, readOrNot);
     newBook.createBook();
     newBook.addLibrary();
 })
@@ -89,5 +86,6 @@ exitModal.addEventListener("click", () =>{
 })
 
 removeBook.addEventListener("click", () =>{
-    book.removeBook()
+    newBook.removeBook()
 })
+
